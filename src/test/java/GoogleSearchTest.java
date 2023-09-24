@@ -1,17 +1,20 @@
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
 import static junit.framework.TestCase.assertEquals;
 
 public class GoogleSearchTest {
     //instanciar webdriver
     private WebDriver driver;
 
-    @Before
+    @BeforeTest
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver/chromedriver.exe");
         driver = new ChromeDriver();
@@ -36,7 +39,7 @@ public class GoogleSearchTest {
     }
 
     //luego de ejecutar mi test, este metodo es de cierre, y cierra el navegador
-    @After
+    @AfterTest
     public void tearDown() {
         driver.quit();
     }

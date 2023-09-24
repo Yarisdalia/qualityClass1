@@ -20,8 +20,13 @@ public class Main {
 //    }
 
     public static void main(String[] args) {
-        Persona yasniel = new Persona("Yasniel", 28, 2900);
-        Persona yarita = new Persona("Yarita", 22, 1000);
+        Trabajador yasniel = new Trabajador("Yasniel", 28, 2900);
+
+        ArrayList<String> otrosBeneficiosYari = new ArrayList<>();
+        otrosBeneficiosYari.add("Carro");
+        otrosBeneficiosYari.add("Datos Mobiles");
+        otrosBeneficiosYari.add("Tarjeta de Puntos");
+        Jefe yarita = new Jefe("Yarita", 22, 1000, otrosBeneficiosYari);
 
         ArrayList<Persona> personas = new ArrayList<>();
         personas.add(yarita);

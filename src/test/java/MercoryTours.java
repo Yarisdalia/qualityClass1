@@ -1,10 +1,13 @@
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class MercoryTours {
 
@@ -29,7 +32,7 @@ public class MercoryTours {
 
     By btnEnviar = By.name("submit");
 
-    @Before
+    @BeforeTest
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver/chromedriver.exe");
         driver = new ChromeDriver();
@@ -83,8 +86,8 @@ public class MercoryTours {
         }
     }
 
-    @After
+    @AfterTest
     public void tearDown(){
         driver.quit();
     }
-}
+ }
